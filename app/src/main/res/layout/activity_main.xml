@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_default"
+    tools:context="com.volodymyr.smartscreen.MainActivity">
+
+    <ToggleButton
+        android:id="@+id/monCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_mon"
+        android:textOn="@string/day_mon"
+        app:layout_constraintEnd_toStartOf="@+id/tueCheckBox"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/tueCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_tue"
+        android:textOn="@string/day_tue"
+        app:layout_constraintEnd_toStartOf="@+id/wedCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/monCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/wedCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_wen"
+        android:textOn="@string/day_wen"
+        app:layout_constraintEnd_toStartOf="@+id/thuCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/tueCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/thuCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_thu"
+        android:textOn="@string/day_thu"
+        app:layout_constraintEnd_toStartOf="@+id/friCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/wedCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ToggleButton
+        android:id="@+id/friCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_fri"
+        android:textOn="@string/day_fri"
+        app:layout_constraintEnd_toStartOf="@+id/satCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/thuCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ToggleButton
+        android:id="@+id/satCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_sat"
+        android:textOn="@string/day_sat"
+        app:layout_constraintEnd_toStartOf="@+id/sunCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/friCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/sunCheckBox"
+        style="@style/DayCheckBoxStyle"
+        android:layout_height="wrap_content"
+        android:textOff="@string/day_sun"
+        android:textOn="@string/day_sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/satCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeOnLabel"
+        style="@style/TimeLabelTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:text="@string/time_on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monCheckBox" />
+
+    <TextView
+        android:id="@+id/timeOffLabel"
+        style="@style/TimeLabelTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:text="@string/time_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monCheckBox" />
+
+    <TextView
+        android:id="@+id/textViewOn"
+        style="@style/TimeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hour_on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeOnLabel" />
+
+    <TextView
+        android:id="@+id/textViewOff"
+        style="@style/TimeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hour_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeOffLabel" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/start"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
